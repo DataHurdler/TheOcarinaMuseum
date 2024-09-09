@@ -1,0 +1,270 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Typography */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 50px;
+  font-size: 16px; /* Larger base font size */
+}
+
+/* Main Content Area */
+main {
+  padding-top: 20px; /* Space above the main content */
+}
+
+h1 {
+  font-size: 2em; /* Larger headers */
+}
+
+h2 {
+  font-size: 1.75em; /* Larger sub-headers */
+}
+
+h3 {
+  font-size: 1.5em; /* Larger smaller headers */
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header .banner {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+nav {
+  margin-bottom: 20px; /* Space below the navigation */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the navigation menu */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Navigation Tabs */
+nav ul li a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Dropdown Menu */
+nav ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px 0;
+  min-width: 150px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+nav ul li ul.dropdown li {
+  display: block;
+  margin: 0;
+}
+
+nav ul li ul.dropdown li a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li ul.dropdown li a:hover {
+  background-color: #444;
+}
+
+nav ul li:hover > ul.dropdown {
+  display: block;
+}
+
+/* Input Button */
+input[type="submit"] {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1em; /* Adjust button text size */
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Slideshow */
+.slideshow-photo {
+  height: 500px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px; /* Space above the main content */
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & Previous Buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number Text (e.g., 1/3) */
+.numbertext {
+  color: #002b5b;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Thumbnail Navigation */
+.thumbnail-container {
+  position: absolute;
+  top: 0;
+  left: -130px;
+  width: 120px;
+  height: 110%;
+  column-count: 1;
+  column-gap: 10px;
+  direction: rtl;
+}
+
+.thumbnail {
+  display: block;
+  margin-bottom: 0px;
+}
+
+.demo {
+  width: 100%;
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Caption for Slideshow Images */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em; /* Adjust footer text size */
+}
+
+/* Ruler Before Footer */
+.footer-ruler {
+  border: none;
+  border-top: 2px solid #333;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    margin-bottom: 15px; /* Less space on smaller screens */
+  }
+  body {
+      padding: 20px;
+  }
+  .container {
+      max-width: 100%;
+      margin: 0;
+      padding-top: 20px; /* Space above the main content */
+  }
+  header .banner {
+      max-width: 100%;
+      max-height: none;
+  }
+  .prev, .next {
+      font-size: 16px;
+      padding: 5px;
+  }
+  .thumbnail-container {
+      width: 80px;
+      left: -90px;
+  }
+  input[type="submit"] {
+      width: 100%;
+      padding: 15px;
+  }
+}
